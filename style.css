@@ -1,0 +1,653 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: hsl(322, 100%, 66%);
+  --pale-cyan: hsl(193, 100%, 96%);
+  --dark-cyan: hsl(192, 100%, 9%);
+  --grayish-blue: hsl(208, 11%, 55%);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  color: var(--dark-cyan);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+a,
+p,
+span,
+button {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  object-fit: contain;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 12px 0;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  background: white;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: capitalize;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-container .hero {
+  width: 100%;
+  height: 105vh;
+  background: url(./images/bg-hero-desktop.svg) no-repeat;
+  background-size: auto;
+  background-position: center;
+  position: relative;
+  padding: 0 10% 50px;
+}
+
+.main-container .hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--pale-cyan);
+  z-index: -1;
+}
+
+.hero .header {
+  width: 100%;
+  height: 20vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo {
+  width: 160px;
+  height: auto;
+}
+
+.header .btn {
+  width: 210px;
+  color: #333;
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.12);
+}
+
+.hero .showcase {
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.showcase .text {
+  width: 45%;
+  padding-right: 70px;
+}
+
+.showcase .text h1 {
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
+  line-height: 1.5em;
+}
+
+.showcase .text p {
+  font-size: 13px;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.6px;
+  line-height: 1.5em;
+  margin-bottom: 25px;
+}
+
+.showcase .text .btn {
+  background-color: var(--pink);
+  width: 208px;
+}
+
+.showcase .image {
+  width: 54%;
+}
+
+.showcase .image img {
+  width: 100%;
+}
+
+/*FEATURES*/
+
+.main-container .features {
+  position: relative;
+  padding: 100px 10% 200px;
+}
+
+.features .flex {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 440px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  border-radius: 10px;
+  padding: 30px 25px 30px 110px;
+}
+
+.features .flex.conversations {
+  flex-direction: row-reverse;
+}
+
+.features .flex .text {
+  width: 42%;
+}
+
+.flex .text h2 {
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.9px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  margin-bottom: 16px;
+}
+
+.flex .text p {
+  color: var(--grayish-blue);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+  line-height: 1.6em;
+}
+
+.features .flex .image {
+  width: 45%;
+  height: 100%;
+}
+
+.features .flex .image img {
+  width: 100%;
+  height: 100%;
+  transform: scale(0.96);
+}
+
+.features .newsletter {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  width: 520px;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px 0 30px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.7px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  margin-bottom: 26px;
+}
+
+.features .newsletter .btn {
+  background-color: var(--pink);
+  width: 208px;
+}
+
+.footer {
+  color: white;
+  padding: 0 10% 70px;
+  padding-top: 140px;
+  height: 400px;
+  width: 100%;
+  background-color: var(--dark-cyan);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer .first {
+  width: 30%;
+  height: 100%;
+}
+
+.footer .first p {
+  margin-top: 20px;
+  display: flex;
+}
+
+.footer .first p img {
+  margin-right: 20px;
+  align-self: flex-start;
+}
+
+.footer .first p small {
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  line-height: 1.6em;
+}
+
+.footer img[alt="logo"] {
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+.footer .second {
+  width: 30%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.second li {
+  margin-bottom: 17px;
+}
+
+.second a {
+  color: white;
+  text-transform: capitalize;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12);
+  transition: color 0.3s;
+}
+
+.footer .third {
+  width: 30%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.third .social a {
+  padding: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 14px;
+  transition: border-color 0.3s;
+}
+
+.third .social a:hover {
+  border-color: var(--pink);
+}
+
+.third .social a:nth-child(1) {
+  padding: 8px 10.6px;
+}
+
+.third .social a:nth-child(3) {
+  padding: 8px 9px;
+}
+
+.third .social a i {
+  font-size: 14px;
+  color: white;
+}
+
+.third .social a:hover i {
+  color: var(--pink);
+  transition: color 0.3s;
+}
+
+.footer .third .copyright {
+  align-self: flex-end;
+}
+
+.copyright p {
+  margin-bottom: 10px;
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.copyright p a {
+  color: white;
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+
+.footer a:hover {
+  color: var(--pink);
+  text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+  .main-container .hero,
+  .main-container .features,
+  .footer {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .showcase .text {
+    margin-top: 50px;
+    padding-right: 20px;
+  }
+
+  .showcase .text h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .main-container .hero,
+  .main-container .features,
+  .footer {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .showcase .text {
+    margin-top: 20px;
+  }
+
+  .showcase .text {
+    width: 50%;
+  }
+
+  .showcase .image {
+    width: 50%;
+  }
+
+  .features .flex {
+    padding: 30px 25px 30px 70px;
+  }
+}
+
+@media (max-width: 950px) {
+  .main-container .hero {
+    height: 95vh;
+  }
+
+  .main-container .hero,
+  .main-container .features,
+  .footer {
+    padding-left: 4%;
+    padding-right: 5%;
+  }
+
+  .showcase .text {
+    margin-top: 20px;
+  }
+
+  .showcase .text h1 {
+    font-size: 30px;
+  }
+
+  .footer .second {
+  padding: 0 10px;
+}
+}
+
+@media (max-width: 820px) {
+  .main-container .hero {
+    height: 100%;
+    padding-top 40px: ;
+  }
+
+  .hero .showcase {
+    flex-direction: column;
+    padding-top: 40px;
+  }
+
+  .showcase .text {
+    width: 65%;
+    margin: 0 auto;
+    padding-right: 0px;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  .showcase .text h1 {
+    font-size: 35px;
+  }
+
+  .showcase .image {
+    width: 70%;
+    margin-top: 30px;
+  }
+
+  .features .flex {
+    padding: 30px 25px 30px 50px;
+  }
+
+  
+  .footer {
+    padding: 0 10% 50px;
+    padding-top: 100px;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer .first,
+  .footer .second,
+  .footer .third {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .footer .second {
+    justify-content: space-evenly;
+  }
+
+  .footer .third {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .third .copyright {
+    align-self: center;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .showcase .text {
+    width: 75%;
+    margin: 0 auto;
+    padding-right: 0px;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  .showcase .image {
+    width: 75%;
+    margin-top: 30px;
+  }
+
+  .features .flex {
+  padding: 30px 25px 30px 25px;
+}
+
+.features .flex .text {
+  width: 48%;
+}
+}
+
+@media (max-width: 600px) {
+  .btn {
+    padding: 12px 0;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: capitalize;
+  }
+  .main-container .hero {
+    height: 100%;
+    background: url(./images/bg-hero-mobile.svg) no-repeat;
+    padding: 0 8% 50px;
+  }
+
+  .hero .header {
+    height: 15vh;
+  }
+
+  .header .logo {
+    width: 120px;
+  }
+  .header .btn {
+    padding: 9px 0;
+    width: 130px;
+  }
+  
+
+  .showcase .text {
+    width: 90%;
+    margin: 0 auto;
+    padding-right: 0px;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  .showcase .text h1 {
+    font-size: 30px;
+  }
+
+  .showcase .image {
+    width: 90%;
+  }
+
+  .main-container .features {
+    padding: 100px 8% 200px;
+  }
+
+  .features .flex,
+  .features .flex.conversations {
+    flex-direction: column-reverse;
+    height: 100%;
+    margin-top: 40px;
+    padding: 40px 25px 40px 25px;
+  }
+
+  .features .flex .text {
+    width: 80%;
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  .features .flex .image {
+    width: 80%;
+  }
+
+  .features .newsletter {
+    width: 84%;
+    padding: 40px 20px 30px;
+  }
+
+  .newsletter h2 {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.7px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    margin-bottom: 22px;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .features .flex .text,
+  .features .flex .image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-container .hero,
+  .main-container .features,
+  .footer {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .showcase .text {
+    width: 100%;
+  }
+
+  .showcase .text h1 {
+    font-size: 25px;
+  }
+
+  .features .flex .text {
+    width: 100%;
+  }
+
+  .features .flex .image {
+    width: 80%;
+  }
+
+  .features .newsletter {
+    width: 92%;
+    padding: 40px 7px 30px;
+    text-align: center;
+  }
+
+  .newsletter h2 {
+    font-size: 17px;
+    letter-spacing: 0.4px;
+  }
+
+  .footer .second {
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 370px) {
+  .showcase .text h1 {
+    font-size: 22px;
+  }
+
+  .header .btn {
+    padding: 9px 0;
+    width: 100px;
+  }
+}
